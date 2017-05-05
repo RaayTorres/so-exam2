@@ -181,6 +181,6 @@ if __name__=="__main__":
 ```
 * Funcionamiento API en swagger
 
-![GitHub Logo0](ScreenS/scSwaggerNotFund.png)
+![GitHub Logo0](ScreenS/scSwaggerNotFound.png)
 
 ![GitHub Logo0](ScreenS/scSwaggerWorking.png)
