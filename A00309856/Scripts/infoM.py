@@ -1,26 +1,13 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from mBase import db
+from mBase import Modelo
+from checkCommands import cMemoria, cDisco, cCpu, eServicio
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/check_user/p2/baseDatos.db'
-db = SQLAlchemy(app)
+db.create_all()
 
+info = Modelo(cCpu()[2],cMemoria()[0],cDisco()[1],eServicio()[0] )
 
-class Modelo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    cCpu = db.Column(db.String(80), nullable=False)
-    cRam = db.Column(db.String(120), nullable=False)
-    cDisco = db.Column(db.String(120), nullable=False)
-    eServicio = db.Column(db.String(120), nullable=False)
+db.session.add(info)
+db.session.commit()
 
-
-    def __init__(self,cCpu,cRam, cDisco, eServicio):
-        self.cCpu = cCpu
-        self.cRam = cRam
-        self.cDisco = cDisco
-        self.eServicio = eServicio
-
-    def __repr__(self):
-	informacion = self.cCpu +" " + self.cRam + " " + self.cDisco+ " " + self.eServicio
-
-        return '<informacion %r>' % informacion
+var=Modelo.query.all()
+print(var)
