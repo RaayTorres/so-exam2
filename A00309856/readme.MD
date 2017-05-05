@@ -116,7 +116,7 @@ var=Modelo.query.all()
 print(var)
 ```
 * Base de datos funcionando
-![GitHub Logo0](Screenshots/scBD.png)
+![GitHub Logo0](ScreenS/scBD.png)
 
 * Para que el script se consultara los datos de consumo cada 60 segundos se realizo una modificacion en el rontab del usuario check user, mediante el siguiente comando:
 ```
@@ -181,6 +181,6 @@ if __name__=="__main__":
 ```
 * Funcionamiento API en swagger
 
-![GitHub Logo0](Screenshots/scSwaggerNotFund.png)
+![GitHub Logo0](ScreenS/scSwaggerNotFund.png)
 
-![GitHub Logo0](Screenshots/scSwaggerWorking.png)
+![GitHub Logo0](ScreenS/scSwaggerWorking.png)
