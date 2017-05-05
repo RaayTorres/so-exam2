@@ -133,7 +133,7 @@ python infoM.py &
 ```
 * Para la parte de la documentacion en swagger, se realizaron modificaciones en el script inicial, 'checkDatos'
 ```
-from flask import Flask, abort, request
+from flask import Flaskfrom flask import Flask, abort, request
 from flask_restplus import Resource, Api
 from flask_restplus import  fields
 import json
@@ -176,7 +176,6 @@ class informacion(Resource):
 if __name__=="__main__":
 
   app.run(host='0.0.0.0', port=8080, debug='True')
-
 
 ```
 * Funcionamiento API en swagger
